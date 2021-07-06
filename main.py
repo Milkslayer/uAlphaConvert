@@ -105,6 +105,4 @@ def linear_substitute(text):
 
 
 if __name__ == '__main__':
-    for key, val in substitutesDict.items():
-        if key == '' or val == '':
-            print(key, val)
+    pass
