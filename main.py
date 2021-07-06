@@ -29,10 +29,10 @@ substitutesDict = {
     'Б': 'B',
     'В': 'W',
     'Г': 'G',
-    'Ғ': 'GH',
+    'Ғ': 'Gh',
     'Д': 'D',
     'Е': 'Ë',
-    'Ж': 'ZH',
+    'Ж': 'Zh',
     'Җ': 'J',
     'З': 'Z',
     'И': 'I',
@@ -42,7 +42,7 @@ substitutesDict = {
     'Л': 'L',
     'М': 'M',
     'Н': 'N',
-    'Ң': 'NG',
+    'Ң': 'Ng',
     'О': 'O',
     'Ө': 'Ö',
     'П': 'P',
@@ -54,8 +54,8 @@ substitutesDict = {
     'Ф': 'F',
     'Х': 'X',
     'Һ': 'H',
-    'Ч': 'CH',
-    'Ш': 'SH',
+    'Ч': 'Ch',
+    'Ш': 'Sh',
     'Ю': 'Yu',
     'Я': 'Ya',
     'a': 'a',
@@ -98,6 +98,8 @@ substitutesDict = {
 def linear_substitute(text):
     new_text = ''
     for symbol in text:
+        if symbol == 'ь' or symbol == 'ъ':
+            continue
         new_text += substitutesDict.get(symbol) if substitutesDict.get(symbol) is not None else symbol
     return new_text
 
